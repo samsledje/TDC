@@ -205,7 +205,7 @@ def NegSample(df, column_names, frac, two_types):
 
 		neg_set = set([tuple([sample_id1[i], sample_id2[i]]) for i in range(len(df)) if sample_id1[i] != sample_id2[i]]) - pos_set
 
-		while len(neg_set) < len(df):
+		while len(neg_set) < x:
 			sample_id1 = np.random.choice(df_unique_id1, size=1, replace=True)
 			sample_id2 = np.random.choice(df_unique_id2, size=1, replace=True)
 
